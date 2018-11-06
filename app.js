@@ -31,7 +31,7 @@ app.post('/update-post',function(req,res){
   let body = req.body.body
   let postId = req.body.postId
 
-  db.none('UPDATE posts SET title = $1, body = $2 WHERE postid = $4',[title,body,postId])
+  db.none('UPDATE posts SET title = $1, body = $2 WHERE postid = $3',[title,body,postId])
   .then(function(){
     res.redirect('/')
   })
