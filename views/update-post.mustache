@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+
+  <h1>Update Post</h1>
+
+  <div>
+    <a href="/">View All Posts</a>
+    <a href="/new">Add New Post</a>
+  </div>
+
+  <form action="/update-post" method="POST">
+      <input type="hidden" name = "postId" value="{{postid}}" />
+      <input type="text" name = "title" value="{{title}}"  />
+      <input type="text" value="{{body}}" name = "body"  />
+      <input type="submit" value="Submit" />
+  </form>
+
+
+</body>
+</html>

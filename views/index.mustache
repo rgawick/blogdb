@@ -1,0 +1,29 @@
+<html>
+<head></head>
+<body>
+
+  <div>
+    <a href="/">View All Posts</a>
+    <a href="/new">Add New Post</a>
+  </div>
+
+  <h1>Blog Posts</h1>
+  <ul>
+  {{#posts}}
+
+  <li>
+    <div>{{title}}</div>
+    <div>{{body}} </div>
+    <form action="/delete-post" method="POST">
+      <input type="hidden" name="postId" value="{{postid}}" />
+      <div><input type="submit" value="Remove"/>
+    </form>
+    <a href="/update-post/{{postid}}">Update</a>
+  </li>
+
+  {{/posts}}
+</ul>
+
+
+</body>
+</html>
